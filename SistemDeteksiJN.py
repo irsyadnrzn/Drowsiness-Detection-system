@@ -9,15 +9,10 @@ import onnxruntime as rt
 import json
 import datetime
 
-print(os.getcwd())
-
-# lan 192.168.100.124 - Huawei
-# lan 192.168.225.246 - Samsung m32 
-
 #Inisiate model for detecting and predicting 
-faceCascade = cv.CascadeClassifier("/home/irsyadjn/Desktop/pythonProgram/detectionSystem/xmlFile/haarcascade_frontalface_default.xml")
-eyeCascade = cv.CascadeClassifier("/home/irsyadjn/Desktop/pythonProgram/detectionSystem/xmlFile/haarcascade_eye.xml")
-model = "/home/irsyadjn/Desktop/pythonProgram/detectionSystem/TrainedModel/modelCNN_2.onnx" 
+faceCascade = cv.CascadeClassifier("haarcascade_frontalface_default.xml")
+eyeCascade = cv.CascadeClassifier("haarcascade_eye.xml")
+model = "modelCNN_2.onnx" 
 
 #Set the captured video properties
 camera_id= "/dev/video0"
@@ -76,7 +71,7 @@ def getPrediction(roi) :
 # Playing Alarm when conditions meet
 def playAlarm () :
     pygame.mixer.init()
-    sound_file = "detectionSystem/mixkit-alert-alarm-1005.wav"
+    sound_file = "sound/alarm.wav"
     pygame.mixer.music.load(sound_file)
     pygame.mixer.music.set_volume(0.5)
     pygame.mixer.music.play(-1)
@@ -84,9 +79,9 @@ def playAlarm () :
 # Get the Name for saved file 
 def fileName(mode):
     if mode == 1 : 
-        path = "/home/irsyadjn/Desktop/pythonProgram/detectionSystem/savedVideo"
+        path = "saved-Video"
     elif mode == 2 : 
-        path = "/home/irsyadjn/Desktop/pythonProgram/detectionSystem/inverenceResults"
+        path = "inverence-Results"
     current_time = datetime.datetime.now()
     formatted_time = current_time.strftime("%Y-%m-%d-%H-%M-%S")
     if mode == 1 : 
