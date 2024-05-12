@@ -1,0 +1,6 @@
+System FPS Average = 10.205
+Detecting Face Average Time = 0.056
+Detecting Right Eye Average Time = 0.003
+Detecting Left Eye Average Time = 0.003
+Predicting Right Eye Average Time = 0.015
+Predicting Left Eye Average Time = 0.015
