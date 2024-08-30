@@ -11,13 +11,15 @@ This Project uses the MRL Eye Dataset. This is a large dataset consisting of ope
 ## Method 
 The Project consists of two main stages, training and testing. The training stage focuses on training the model to predict eye states and the testing stage focuses on building a system to detect drowsiness on a Windows laptop. 
 ### Training 
-Training done using 4 models and all the model architecture can be accessed in the [Model Architectures folder](https://github.com/irsyadnrzn/Drowsiness-Detection-system/tree/main/Model%20Architectures). All Models are trained in different epochs, 10,25, 50, and 75. The models were evaluated using Confusion Matrix and ROC Graph. Besides that, The SVM Models with different kernels and validation methods are also used to compare their performances with the CNN Models. All training results can be accessed in the [Training Results folder](https://github.com/irsyadnrzn/Drowsiness-Detection-system/tree/main/Training%20Results). 
-The Program used to train the model can be accessed [here](https://github.com/irsyadnrzn/Drowsiness-Detection-system/blob/main/modelTraining.ipynb).
+Training done using 4 models and all the model architecture can be accessed in the [Model Architectures folder](https://github.com/irsyadnrzn/Drowsiness-Detection-system/tree/main/Model%20Architectures). All Models are trained in different epochs, starting from 25 to 75. The models were evaluated using Confusion Matrix and ROC Graph.<br>
+Besides that, The SVM Models with different kernels and validation methods are also used to compare their performances with the CNN Models.<br> 
+  - All training results can be accessed in the [Training Results folder](https://github.com/irsyadnrzn/Drowsiness-Detection-system/tree/main/Training%20Results). <br> 
+  - The Program used to train the model can be accessed [here](https://github.com/irsyadnrzn/Drowsiness-Detection-system/blob/main/modelTraining.ipynb).<br>
 ### Testing 
 After the Best model was obtained, it was used in the drowsiness detection system. The drowsiness Systems Mechanism will be explained below:
-  1. Take a video input from a webcam
-  2. Detect the face using Haar Cascade
-  3. Detect the left eye and right using Haar Cascade
-  4. Eye States predicted using the Best Trained Model
-  5. If the eyes are closed for 3 seconds in a row, the alarm is triggered
-The Program used for testing the system can be accessed on [sistemDeteksi.ipynb](https://github.com/irsyadnrzn/Drowsiness-Detection-system/blob/main/sistemDeteksi.ipynb)
+  1. Take a video input from a webcam.
+  2. Detect the face using Haar Cascade.
+  3. Detect the left eye and right using Haar Cascade.
+  4. Eye States predicted using the Best Trained Model.
+  5. If the eyes are closed for 3 seconds in a row, the alarm is triggered.
+The Program used for testing the system can be accessed on [sistemDeteksi.ipynb] (https://github.com/irsyadnrzn/Drowsiness-Detection-system/blob/main/sistemDeteksi.ipynb)
