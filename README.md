@@ -2,7 +2,7 @@
 
 ## Overview
 
-This project aims to detect drowsy drivers to improve road safety. It uses the OpenCV library to capture video from a webcam and then applies the Haar Cascade (Viola-Jones Algorithm) to detect faces and eyes. The system predicts the condition of the eyes (open or closed) using a pre-trained Convolutional Neural Network (CNN) model to determine if the driver is drowsy.
+Traffic accidents are one of the leading causes of death in the world. Based on publications by the World Health Organization (WHO), in 2018, traffic accidents caused at least 1.35 million deaths every year, making it the eighth most significant cause of death in the world. One way to overcome this is by developing a drowsiness detection system for drivers. Some research has been done and got excellent results. Nevertheless, most earlier studies did not test the system in real-world scenarios in a moving car. This research aims to test the drowsiness detection system in a moving vehicle. The system uses the Haar cascade algorithm to detect faces and eyes. The convolutional Neural Network (CNN) model predicted open and closed eyes. The research results showed that the best model performance was obtained by CNN model-2, with accuracy, precision, recall, and f1-score values on test data of 92%. In the real-time detection, the detection system obtained an accuracy of 94.6% in bright light and 86.4% in dim light. The system was also tested in a moving car using Nvidia Jetson Nano as a computational device and got an overall accuracy of 87%.
 
 ## Dataset
 
